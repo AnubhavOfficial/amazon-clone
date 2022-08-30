@@ -8,19 +8,12 @@ import { Search } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   appbar: {
-    // position: "static",
-    width: "100vw",
     background: "#131921",
-  },
-  toolbar: {
-    padding: "0 1rem",
-    margin: 0,
   },
   logo: {
     width: "6.7rem",
     height: "1.9rem",
     marginTop: "0.2rem",
-    marginLeft: "1rem",
   },
   location: {
     display: "flex",
@@ -73,6 +66,9 @@ const useStyles = makeStyles({
     background: "#FEBD69",
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
+    "&:hover": {
+      background: "#FEBD69",
+    },
   },
   searchIcon: {
     width: "2rem",
@@ -86,7 +82,7 @@ function NavBar() {
   return (
     <div>
       <AppBar className={classes.appbar}>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar>
           <Link to="/">
             <img className={classes.logo} src={amazonLogo} alt="" />
           </Link>
@@ -110,7 +106,12 @@ function NavBar() {
               <Search className={classes.searchIcon} />
             </Button>
           </div>
-          <Link to="/Cart">Cart</Link>
+          <Link
+            to="/Cart"
+            style={{ fontSize: "1.3rem", color: "white", marginLeft: "2rem" }}
+          >
+            Cart
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
