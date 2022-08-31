@@ -12,6 +12,7 @@ import AddBanner1 from "../Assets/images/amazonAddBanner1.jpg";
 import AddBanner2 from "../Assets/images/amazonAddBanner2.jpg";
 import AddBanner3 from "../Assets/images/amazonAddBanner3.jpg";
 import AddBanner4 from "../Assets/images/amazonAddBanner4.jpg";
+import ProductDeliveryOptions from "./ProductDeliveryOptions";
 
 const useStyles = makeStyles({
   main: {
@@ -211,6 +212,9 @@ const ProductDescription = () => {
               );
             })}
           </div>
+          <Divider className={classes.divider} />
+          <ProductDeliveryOptions />
+          <Divider className={classes.divider} />
           <Button className={classes.addToCart}>Add to Cart</Button>
         </div>
       </div>
